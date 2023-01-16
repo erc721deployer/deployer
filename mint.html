@@ -50,8 +50,6 @@
 {{#each items}}
 <tr>
   <td><a class='token' target="_blank" href="{{opensea}}">token #{{tokenId}}</a></td>
-  <td><a class='token' target="_blank" href="{{looksrare}}">token #{{tokenId}}</a></td>
-  <td><a class='token' target="_blank" href="{{rarible}}">token #{{tokenId}}</a></td>
 </tr>
 {{/each}}
 </table>
@@ -86,7 +84,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     for(let i=1; i<=invite.condition.converted.limit; i++) {
       items.push(i)
     }
-    let image = (cached && cached[placeholder.converted.image] ? cached[placeholder.converted.image] : placeholder.converted.image)
+    
     document.querySelector(".box").innerHTML = template({
       image,
       etherscan,
